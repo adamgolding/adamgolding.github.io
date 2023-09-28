@@ -1,0 +1,74 @@
+(function(w, d) {
+  try {
+    d = w.top.document || d; w = w.top.document ? w.top : w;
+  } catch (e) {}
+  var ttag = function() {
+    var _tt_section = window.location.pathname.split('/')[1], 
+    _tt_sections = ["events", "restaurants", "bars", "cafes", "bakery", "grocery", "fashion", "design", "bookstores", "gallery", "fitness", "services", "hotels"],
+    paragraphs = window.top.document.querySelectorAll(".rich-content > p"),
+    minSlot = 0,
+    _tt_slot;
+if (_tt_sections.includes(_tt_section)) {
+  for (var i = 0; i < paragraphs.length; i++) {
+	if (paragraphs[i].innerText !== '' && minSlot < 5) {
+		_tt_slot = paragraphs[i];
+		minSlot++;
+	}
+  }
+} else {
+  for (var i = 0; i < paragraphs.length; i++) {
+	if (paragraphs[i].innerText !== '' && minSlot < 3) {
+		_tt_slot = paragraphs[i];
+		minSlot++;
+	}
+  }
+}
+    w.teads.page(154121).placement(168488, {slider: {allow_corner_position: false, allow_top_position: false}, "css":"margin: 0px auto 20.4px; max-width: 550px !important;","callbacks":{"AdError":function () {var BlogTOSlot = '/70671651/blogto/BlogTO_Teads_Desktop_Passback';
+if (window.top.teads.Context.isMobile()) {
+    BlogTOSlot = '/70671651/blogto/BlogTO_Teads_Mobile_Passback';
+} else if (window.top.teads.Context.isTablet()) {
+    BlogTOSlot = '/70671651/blogto/BlogTO_Teads_Tablet_Passback';
+}
+var Fr = window.document.createElement('iframe');
+Fr.width = 300;
+Fr.height = 250;
+Fr.border = 0;
+Fr.style.border = "0";
+Fr.frameBorder = 0;
+Fr.style.display = "block";
+Fr.style.margin = "0px auto 30px";
+var content = "<html><head><style>body{margin:0;padding:0;border:0}</style></head><body><div id='gpt-passback'><script src='https://www.googletagservices.com/tag/js/gpt.js'> window.googletag = window.googletag || {cmd: []}; googletag.cmd.push(function() { googletag.defineSlot('" + BlogTOSlot + "', [300, 250], 'gpt-passback').addService(googletag.pubads()).setTargeting('passback', ['yes']); googletag.enableServices(); googletag.display('gpt-passback'); }); </script></div></body></html>";
+var _tt_passback_slot = window.top.document.body.querySelectorAll(".rich-content > p")[3];
+	_tt_passback_slot.parentNode.insertBefore(Fr, _tt_passback_slot);
+Fr.contentWindow.document.open('text/html');
+Fr.contentWindow.document.write(content);
+Fr.contentWindow.document.close();}},"format":"inread","slot":{"btf":false,"selector":_tt_slot,"minimum":1}}).passback(function passback() {var BlogTOSlot = '/70671651/blogto/BlogTO_Teads_Desktop_Passback';
+if (window.top.teads.Context.isMobile()) {
+    BlogTOSlot = '/70671651/blogto/BlogTO_Teads_Mobile_Passback';
+} else if (window.top.teads.Context.isTablet()) {
+    BlogTOSlot = '/70671651/blogto/BlogTO_Teads_Tablet_Passback';
+}
+var Fr = window.document.createElement('iframe');
+Fr.width = 300;
+Fr.height = 250;
+Fr.border = 0;
+Fr.style.border = "0";
+Fr.frameBorder = 0;
+Fr.style.display = "block";
+Fr.style.margin = "0px auto 30px";
+var content = "<html><head><style>body{margin:0;padding:0;border:0}</style></head><body><div id='gpt-passback'><script src='https://www.googletagservices.com/tag/js/gpt.js'> window.googletag = window.googletag || {cmd: []}; googletag.cmd.push(function() { googletag.defineSlot('" + BlogTOSlot + "', [300, 250], 'gpt-passback').addService(googletag.pubads()).setTargeting('passback', ['yes']); googletag.enableServices(); googletag.display('gpt-passback'); }); </script></div></body></html>";
+var _tt_passback_slot = window.top.document.body.querySelectorAll(".rich-content > p")[3];
+	_tt_passback_slot.parentNode.insertBefore(Fr, _tt_passback_slot);
+Fr.contentWindow.document.open('text/html');
+Fr.contentWindow.document.write(content);
+Fr.contentWindow.document.close();}).serve();
+  };
+  if (w.teads && w.teads.page) { ttag(); }
+  else if (!w.teadsscript) {
+    var s = document.createElement('script');
+    s.src = 'https://a.teads.tv/media/format/v3/teads-format.min.js';
+    s.async = true; s.onload = ttag; w.teadsscript = d.getElementsByTagName('head')[0].appendChild(s);
+  } else {
+    w.teadsscript.addEventListener('load', ttag);
+  }
+})(window, document);
